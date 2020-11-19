@@ -12,7 +12,7 @@ define([ "underscore", "backbone"], function( _, Backbone ) {
         set: function( attributes, options ) {
 
             _.each( attributes, function( value, key ){
-                if ( Array.isArray( value ) ) attributes[ key+"Checksum"] = value.join() ;
+                if ( Array.isArray( value ) ) attributes[ key + "_joined" ] = value.join() ;
             });
 
             return Backbone.Model.prototype.set.call( this, attributes, options );

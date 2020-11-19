@@ -15,13 +15,16 @@ require.config({
             console.log("onChange: ", o);
         });
 
-        bauGroup.set({ "order": [ "US60", "UA40"] });
+        let obj = {
+            "order": [ "US60", "UA40"] 
+        };
 
+        bauGroup.set( obj );
 
         setTimeout( function(){
 
-            bauGroup.attributes.order.push( "UA100" );
-            bauGroup.set( { order: bauGroup.attributes.order } ) 
+            obj.order.push( "UA100" );
+            bauGroup.set( obj ) 
 
         }, 2000 );
 
