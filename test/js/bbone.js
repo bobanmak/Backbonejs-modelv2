@@ -1,12 +1,12 @@
 require.config({
     baseUrl: "",
     paths: {
-        "backbone": "../node_modules/backbone/backbone",
-        "underscore": "../node_modules/underscore/underscore",
-        "jquery": "../node_modules/jquery/dist/jquery",
+        "backbone": "../../node_modules/backbone/backbone",
+        "underscore": "../../node_modules/underscore/underscore",
+        "jquery": "../../node_modules/jquery/dist/jquery",
     }
   });
-  require([ "underscore", "backbone", "../src/aModel" ], function ( _, Backbone, aModel ) {
+  require([ "underscore", "backbone", "../../src/aModel" ], function ( _, Backbone, aModel ) {
        
 
         let bauGroup = new aModel();
