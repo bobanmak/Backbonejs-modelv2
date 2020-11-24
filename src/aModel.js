@@ -6,7 +6,7 @@ define([ "underscore", "backbone"], function( _, Backbone ) {
     };
 
 
-    _.extend( aModel.prototype, Backbone.Model.prototype, {
+    aModel.prototype = Object.assign( Object.create( Backbone.Model.prototype ), {
 
           // Overriding set
         set: function( attributes, options ) {
